@@ -347,7 +347,7 @@ in {
             if pkgs ? fishPlugins && pkgs.fishPlugins ? foreign-env then
               "${pkgs.fishPlugins.foreign-env}/share/fish/vendor_functions.d"
             else
-              "${pkgs.fish-foreign-env}/share/fish-foreign-env/functions"
+              "${pkgs.fishPlugins.foreign-env}/share/fish-foreign-env/functions"
           }
           fenv source ${config.home.profileDirectory}/etc/profile.d/hm-session-vars.sh > /dev/null
           set -e fish_function_path[1]
